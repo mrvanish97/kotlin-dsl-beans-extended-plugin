@@ -2,6 +2,10 @@
 
 # Kotlin Script Beans for Spring Change long
 
+## [0.0.2]
+### Code changes
+- Packages renamed
+
 ## [0.0.1]
 ### Added
 - File icon for `.beans.kts` files 

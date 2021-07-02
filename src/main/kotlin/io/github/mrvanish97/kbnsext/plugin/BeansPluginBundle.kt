@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: EPL-2.0
  ******************************************************************************/
 
-package by.mrvanish97.kbnsext.plugin
+package io.github.mrvanish97.kbnsext.plugin
 
 import com.intellij.AbstractBundle
 import org.jetbrains.annotations.NonNls

@@ -21,11 +21,11 @@
 
   <extensions defaultExtensionNs="com.intellij">
     <internalFileTemplate name="Kotlin Beans Script.beans"/>
-    <iconProvider implementation="by.mrvanish97.kbnsext.plugin.KotlinBeansScriptIconProvider" order="first"/>
+    <iconProvider implementation="io.github.mrvanish97.kbnsext.plugin.KotlinBeansScriptIconProvider" order="first"/>
   </extensions>
 
   <actions>
-    <action id="Kotlin.NewBeansScript" class="by.mrvanish97.kbnsext.plugin.NewBeansScriptAction">
+    <action id="Kotlin.NewBeansScript" class="io.github.mrvanish97.kbnsext.plugin.NewBeansScriptAction">
       <add-to-group group-id="NewGroup" anchor="before" relative-to-action="NewFromTemplate"/>
     </action>
   </actions>
