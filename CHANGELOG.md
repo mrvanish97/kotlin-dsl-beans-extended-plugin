@@ -1,7 +1,8 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
-# kotlin-dsl-beans-extended-plugin Changelog
+# Kotlin Script Beans for Spring Change long
 
-## [Unreleased]
+## [0.0.1]
 ### Added
-- Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
+- File icon for `.beans.kts` files 
+- "Create new Kotlin Beans Script file" in the `File > New` group using dedicated template

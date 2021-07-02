@@ -1,19 +1,33 @@
+<!--
+  ~ Copyright (c) 2021 mrvanish97 [and others]
+  ~
+  ~ This program and the accompanying materials are made
+  ~ available under the terms of the Eclipse Public License 2.0
+  ~ which is available at https://www.eclipse.org/legal/epl-2.0/
+  ~
+  ~ SPDX-License-Identifier: EPL-2.0
+  -->
+
 <idea-plugin>
-    <id>com.github.uonagent.kotlindslbeansextendedplugin</id>
-    <name>kotlin-dsl-beans-extended-plugin</name>
-    <vendor>uonagent</vendor>
+  <id>by.mrvanish97.kbnsext.plugin</id>
+  <name>Kotlin Script Beans for Spring</name>
+  <vendor>mrvanish97</vendor>
 
-    <!-- Product and plugin compatibility requirements -->
-    <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
-    <depends>com.intellij.modules.platform</depends>
+  <!-- Product and plugin compatibility requirements -->
+  <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.java</depends>
+  <depends>org.jetbrains.kotlin</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.uonagent.kotlindslbeansextendedplugin.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.uonagent.kotlindslbeansextendedplugin.services.MyProjectService"/>
-    </extensions>
+  <extensions defaultExtensionNs="com.intellij">
+    <internalFileTemplate name="Kotlin Beans Script.beans"/>
+    <iconProvider implementation="by.mrvanish97.kbnsext.plugin.KotlinBeansScriptIconProvider" order="first"/>
+  </extensions>
 
-    <applicationListeners>
-        <listener class="com.github.uonagent.kotlindslbeansextendedplugin.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
+  <actions>
+    <action id="Kotlin.NewBeansScript" class="by.mrvanish97.kbnsext.plugin.NewBeansScriptAction">
+      <add-to-group group-id="NewGroup" anchor="before" relative-to-action="NewFromTemplate"/>
+    </action>
+  </actions>
+
 </idea-plugin>
